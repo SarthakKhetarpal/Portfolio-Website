@@ -43,8 +43,8 @@ export const Home = ({currentMode}) => {
 
   return (
     <div className='home-effect flex lg:flex-row flex-col items-center justify-center w-screen min-h-screen
-    transition-all duration-200'>
-      <div className='w-[70%] lg:w-[50%] border-richblack-100'>
+    transition-all duration-200 mb-10'>
+      <div className='w-[80%] md:w-[70%] lg:w-[50%] border-richblack-100 mt-6'>
         <img src={imgSource} alt='Sarthak'
           className='2xl:w-[68%] lg:w-[75%] w-[65%] lg:rounded-3xl lg:my-0 mb-4 rounded-full
           mx-auto text-center shadow-2xl shadow-black'
