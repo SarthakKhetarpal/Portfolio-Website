@@ -113,7 +113,7 @@ export const About = ({currentMode}) => {
 
           <div className='lg:w-[45%] md:pl-[5%] pl-0 flex flex-col gap-10 items-start text-xs md:text-base'>
             <h1 className='font-semibold text-xl md:text-2xl'>Personal Info</h1>
-            <div className='flex flex-row gap-3 md:gap-6'>
+            <div className='flex flex-row items-center justify-center gap-3 md:gap-6'>
               <div className='flex flex-col gap-4 justify-start items-start'>
                 <p className='text-richblack-1200'>Name</p>
                 <p className='text-richblack-1200'>Age</p>
@@ -187,12 +187,12 @@ export const About = ({currentMode}) => {
             Technical Skills
           </p>
 
-          <div className='flex flex-row flex-wrap items-center justify-center mx-auto gap-x-20 gap-y-12 md:gap-y-20 md:gap-x-28'>
+          <div className='flex flex-row flex-wrap items-center justify-center mx-auto gap-x-14 sm:gap-x-20 gap-y-8 sm:gap-y-12 md:gap-y-20 md:gap-x-28'>
             {
               skills.map( (skill,index) => (
-                <div key={index} className='flex flex-col gap-4 items-center justify-center group cursor-pointer z-30 transition-all duration-500'>
+                <div key={index} className='flex flex-col gap-6 items-center justify-center group cursor-pointer z-30 transition-all duration-500'>
                   <img src={skill.source} alt={skill.text} 
-                   className='hover:scale-125 w-[75px] md:w-[100px] lg:w-[120px]'
+                   className='hover:scale-125 w-[60px] sm:w-[75px] md:w-[100px] lg:w-[120px]'
                    />
                   <p className={`text-xs font-extrabold invisible opacity-0 shadow-lg ${currentMode === "dark" ? "shadow-black" : "shadow-white"} group-hover:visible group-hover:opacity-100`}>
                     {skill.text}
@@ -244,8 +244,10 @@ export const About = ({currentMode}) => {
                 organisation={`Hansa Solutions India Pvt. Ltd.`}
                 about={<div className='pb-4'>
                   <ul>
-                  <li><span className='font-bold'>Client :</span><span/> ICICI Prudential Life Insurance</li>
-                  <li><span className='font-bold'>Project Title : </span> Insurance One Snow White Ultra Group & Insurance One 4.0</li>
+                  <li className='flex flex-row gap-x-1'><span className='font-bold'>Team :</span> Hansa Core Resources <p className='font-bold'>(Research & Development)</p></li>
+                  <li><span className='font-bold'>Project Title : </span> Insurance One Products</li>
+                  <li>• Working as a part of the core in house resource in <b>Research and Development</b> team, Developing new modules for various Insurance One product along with enhancing the pre-existing modules.</li>
+                  <li>• Unit Testing report along with the Test Cases for both negative and positive scenarios were developed.</li>
                   </ul>
                 </div>}
                 currentMode={currentMode}
