@@ -244,9 +244,9 @@ export const About = ({currentMode}) => {
                 organisation={`Hansa Solutions India Pvt. Ltd.`}
                 about={<div className='pb-4'>
                   <ul>
-                  <li className='flex flex-row gap-x-1'><span className='font-bold'>Team :</span> Hansa Core Resources <p className='font-bold'>(Research & Development)</p></li>
+                  <li><span className='font-bold'>Team :</span> Hansa Core Resources <b className='font-bold'>(Research & Development)</b></li>
                   <li><span className='font-bold'>Project Title : </span> Insurance One Products</li>
-                  <li>• Working as a part of the core in house resource in <b>Research and Development</b> team, Developing new modules for various Insurance One product along with enhancing the pre-existing modules.</li>
+                  <li>• Working as a part of the core in house resource in <b className='font-bold'>Research and Development</b> team, Developing new modules for various Insurance One product along with enhancing the pre-existing modules.</li>
                   <li>• Unit Testing report along with the Test Cases for both negative and positive scenarios were developed.</li>
                   </ul>
                 </div>}
