@@ -9,7 +9,7 @@ export const EducationCard = ({duration,degree,institute,about,line,currentMode,
 
             <div className='flex flex-col items-center justify-center'>
 
-                <div className='p-3 rounded-full bg-orange text-2xl text-white'>
+                <div className='p-2 sm:p-3 rounded-full bg-orange text-lg sm:text-xl md:text-2xl text-white'>
                     <FaBook />
                 </div>
                 
@@ -25,7 +25,7 @@ export const EducationCard = ({duration,degree,institute,about,line,currentMode,
                     {duration}
                 </div>
                 <div className='flex flex-row justify-between'>
-                    <p className='font-semibold'>
+                    <p className='font-semibold text-sm sm:text-md'>
                         {degree}
                     </p>
                     <p className={`${currentMode === "light" ? "bg-richblack-5" : "bg-richblack-950 text-white"}
@@ -33,10 +33,10 @@ export const EducationCard = ({duration,degree,institute,about,line,currentMode,
                         {cgpa}
                     </p>
                 </div>
-                <p className='font-bold text-richblack-1200'>
+                <p className='font-bold text-sm sm:text-md text-richblack-1200'>
                     -{" "}{institute}
                 </p>
-                <p className='text-sm font-light'>
+                <p className='text-xs sm:text-sm font-light'>
                     {about}
                 </p>
             </div>

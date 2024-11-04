@@ -183,7 +183,7 @@ export const About = ({currentMode}) => {
           {/* Technical Skills Section */}
         <div className='w-full lg:max-w-[70%] flex flex-col items-center justify-center mx-auto gap-12'>
 
-          <p className='font-semibold text-2xl'>
+          <p className='font-semibold  text-xl md:text-2xl'>
             Technical Skills
           </p>
 
@@ -209,7 +209,7 @@ export const About = ({currentMode}) => {
         {/* Education Section */}
         <div className='flex flex-col items-center justify-center gap-12'>
 
-          <p className='font-semibold text-2xl'>
+          <p className='font-semibold  text-xl md:text-2xl'>
             Education
           </p>
 
@@ -232,7 +232,7 @@ export const About = ({currentMode}) => {
         {/* Experience Section */}
         <div className='flex flex-col items-center justify-center mx-auto gap-12'>
 
-          <p className='font-semibold text-2xl'>
+          <p className='font-semibold text-xl md:text-2xl'>
             Experience
           </p>
 
@@ -246,7 +246,7 @@ export const About = ({currentMode}) => {
                   <ul>
                   <li><span className='font-bold'>Team :</span> Hansa Core Resources <b className='font-bold'>(Research & Development)</b></li>
                   <li><span className='font-bold'>Project Title : </span> Insurance One Products</li>
-                  <li>• Working as a part of the core in house resource in <b className='font-bold'>Research and Development</b> team, Developing new modules for various Insurance One product along with enhancing the pre-existing modules.</li>
+                  <li>• Working as a part of the core in house resource in <b className='font-bold'>Research and Development</b> team, Developing new modules for various Insurance One products along with enhancing the pre-existing modules.</li>
                   <li>• Unit Testing report along with the Test Cases for both negative and positive scenarios were developed.</li>
                   </ul>
                 </div>}
@@ -276,8 +276,8 @@ export const About = ({currentMode}) => {
                 about={<div className='pb-4'>
                   <ul>
                     <li><span className='font-bold'>Client :</span> ICICI Prudential Life Insurance</li>
-                    <li><span className='font-bold'>Project Title :</span> Snow White Ultra Group</li>
-                    <li>• Developed and maintained major submodules using VB.NET and SQL as Backend in IOneG application which enables complete automation of Group Insurance.</li>
+                    <li><span className='font-bold'>Project Title :</span> Insurance One Snow White Ultra Group</li>
+                    <li>• Developed and maintained New Business submodules using VB.NET and SQL as Backend in IOneG application which enables complete automation of Group Insurance.</li>
                     <li>• Unit Testing report along with the Test Cases for both negative and positive scenarios were developed.</li>
                   </ul>
                 </div>}
@@ -292,7 +292,7 @@ export const About = ({currentMode}) => {
         {/* Coding Profiles section */}
         <div className='flex flex-col items-center justify-center mx-auto gap-12'>
 
-          <p className='font-semibold text-2xl'>
+          <p className='font-semibold  text-xl md:text-2xl'>
             Coding Profiles
           </p>
 
@@ -317,7 +317,7 @@ export const About = ({currentMode}) => {
         {/* Awards & Certifications Section */}
         <div className='flex flex-col items-center justify-center mx-auto gap-12'>
 
-          <p className='font-semibold text-2xl'>
+          <p className='font-semibold text-xl md:text-2xl'>
             Awards & Certifications
           </p>
 

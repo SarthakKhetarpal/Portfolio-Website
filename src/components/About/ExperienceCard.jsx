@@ -9,7 +9,7 @@ export const ExperienceCard = ({line, duration, designation, organisation, about
 
             <div className='h-full  flex flex-col items-center justify-center'>
 
-                <div className='p-3 z-[20] rounded-full bg-orange text-2xl text-white'>
+                <div className='p-2 sm:p-3 z-[20] rounded-full bg-orange text-lg sm:text-xl md:text-2xl text-white'>
                     <FaBriefcase />
                 </div>
                 
@@ -24,13 +24,13 @@ export const ExperienceCard = ({line, duration, designation, organisation, about
                  w-fit rounded-full px-3 py-1 text-xs font-bold`}>
                     {duration}
                 </div>
-                <p className='font-semibold'>
+                <p className='font-semibold text-sm sm:text-md'>
                   {designation}
                 </p>
-                <p className='font-bold text-richblack-1200'>
+                <p className='font-bold text-richblack-1200 text-sm sm:text-md'>
                     -{" "}{organisation}
                 </p>
-                <p className='text-sm font-light'>
+                <p className='text-xs sm:text-sm font-light'>
                     {about}
                 </p>
             </div>
