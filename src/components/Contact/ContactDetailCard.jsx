@@ -9,12 +9,12 @@ export const ContactDetailCard = ({icon, header, text}) => {
         </div>
 
         <div className='flex flex-col sm:gap-1 md:gap-2'>
-            <p className='opacity-70'>
+            <p className='opacity-70 text-sm md:text-md'>
                 {header}
             </p>
             {
                 header === "CURRENT ADDRESS" ? (
-                    <p className='cursor-pointer md:text-base text-sm'>
+                    <p className='cursor-pointer md:text-base text-xs'>
                         {text}
                     </p>
                 ) : (

@@ -72,7 +72,7 @@ export const Home = ({currentMode}) => {
           />
         </div>
 
-        <p className={`${currentMode==="dark" ? "text-white" : "text-richblack-500"} w-[90%] lg:w-[75%] text-sm leading-6 xl:text-[17px] py-[25px] xl:py-[35px]`}>
+        <p className={`${currentMode==="dark" ? "text-white" : "text-richblack-500"} w-[90%] lg:w-[75%] text-xs md:text-sm leading-6 xl:text-[17px] py-[25px] xl:py-[35px]`}>
         I’m a passionate Software Development Engineer with a strong focus on building efficient, scalable, and user-friendly applications, with <b>2+ years</b> of experience in working on a wide range of projects, from full-stack web applications to system-level software.
         <br/><br/>Beyond my technical skills, I am a continuous learner, always exploring new technologies and staying up-to-date with industry trends to improve and expand my expertise.
         <br/><br/>Let’s create something great together!

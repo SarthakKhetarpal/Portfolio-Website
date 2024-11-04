@@ -75,13 +75,13 @@ export const Contact = ({currentMode}) => {
       flex lg:flex-row flex-col gap-12 lg:gap-0 w-full items-center justify-center lg:ml-[12%] lg:mr-[22%] md:max-w-[80%] lg:max-w-[100%]`}>
         
         {/* Contact Details */}
-        <div className='w-[90%] lg:w-[35%] flex flex-col gap-8 md:px-16'>
+        <div className='w-[80%] sm:w-[85%] md:w-[90%] lg:w-[35%] flex flex-col gap-6 md:gap-8 md:px-16'>
           
-          <p className='w-full text-2xl md:text-[28px] font-semibold leading-9 justify-self-end'>
+          <p className='w-full text-xl md:text-2xl md:text-[28px] font-semibold leading-9 justify-self-end'>
             LET'S CONNECT !
           </p>
 
-          <p className='md:text-base text-sm h-auto'>
+          <p className='md:text-base sm:text-sm text-xs h-auto'>
           Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of a greater visions.
           </p>
  
@@ -104,7 +104,7 @@ export const Contact = ({currentMode}) => {
             {
               socialData.map( (element) => {
                 return (
-                  <div key={element.id} className='text-4xl rounded-md text-richblack-1100 hover:text-orange hover:scale-140 hover:bg-richblack-950 z-10 cursor-pointer bg-white'>
+                  <div key={element.id} className='text-3xl md:text-4xl rounded-md text-richblack-1100 hover:text-orange hover:scale-140 hover:bg-richblack-950 z-10 cursor-pointer bg-white'>
                     <a href={element.path} target='blank'>
                       {element.icon}
                     </a>
@@ -118,7 +118,7 @@ export const Contact = ({currentMode}) => {
         </div>
 
         {/* Contact Form */}
-        <div className='w-full lg:w-[45%]'>
+        <div className='w-[95%] lg:w-[45%]'>
           <ContactForm currentMode={currentMode}/>
         </div>
 

@@ -8,7 +8,7 @@ export const CTButton = ({ text, icon, clickHandler, currentMode }) => {
        hover:text-white`} 
       onClick={clickHandler}
     >
-      <div className='pl-3 md:pl-6 md:pr-1 py-2 md:py-4 text-sm font-semibold'>
+      <div className='pl-3 md:pl-6 md:pr-1 py-2 md:py-4 text-xs md:text-sm font-semibold'>
         {text}
       </div>
       <span className='bg-orange rounded-full p-3 md:p-4 text-lg md:text-2xl text-white'>
