@@ -113,8 +113,8 @@ export const About = ({currentMode}) => {
 
           <div className='lg:w-[45%] md:pl-[5%] pl-0 flex flex-col gap-10 items-start text-xs md:text-base'>
             <h1 className='font-semibold text-xl md:text-2xl'>Personal Info</h1>
-            <div className='flex flex-row items-center justify-center gap-3 md:gap-6'>
-              <div className='flex flex-col gap-4 justify-start items-start'>
+            <div className='flex flex-row justify-center items-start gap-3 md:gap-6'>
+              <div className='flex flex-col gap-4 justify-center items-start'>
                 <p className='text-richblack-1200'>Name</p>
                 <p className='text-richblack-1200'>Age</p>
                 <p className='text-richblack-1200'>Phone</p>
@@ -122,7 +122,7 @@ export const About = ({currentMode}) => {
                 <p className='text-richblack-1200'>Location</p>
                 <p className='text-richblack-1200'>Nationality</p>
               </div>
-              <div className='flex flex-col gap-4 justify-start items-start'>
+              <div className='flex flex-col gap-4 justify-center items-start'>
                 <p className='text-richblack-1200'>:</p>
                 <p className='text-richblack-1200'>:</p>
                 <p className='text-richblack-1200'>:</p>
@@ -130,13 +130,13 @@ export const About = ({currentMode}) => {
                 <p className='text-richblack-1200'>:</p>
                 <p className='text-richblack-1200'>:</p>
               </div>
-              <div className='flex flex-col gap-4 justify-start items-start'>
+              <div className='flex flex-col gap-4 justify-center items-start'>
                 <p className='font-medium'>Sarthak Khetarpal</p>
                 <p className='font-medium'>{age}</p>
                 <a href='tel:+91-8607879989' className='z-30 font-medium hover:text-orange cursor-pointer'>+91-8607879989</a>
                 <a href='mailto:sarthakkhetarpal2000@icloud.com' className='z-30 font-medium hover:text-orange cursor-pointer'>sarthakkhetarpal2000@icloud.com</a>
                 <p className='font-medium'>Hyderabad</p>
-                <p className='font-medium'>India <span className='text-xl'>🇮🇳</span></p>
+                <p className='flex justify-center items-center gap-1 font-medium'>Indian <span className='text-xl'>🇮🇳</span></p>
               </div>
             </div>
 
@@ -158,8 +158,8 @@ export const About = ({currentMode}) => {
                 2+
               </div>
               <div className='flex flex-row items-center justify-start gap-2 text-base md:text-lg font-medium'>
-                <div className='w-[10%] h-[2px] bg-richblack-1200'></div>
-                <p>YEARS OF EXPERIENCE</p>
+                <div className='w-[15%] sm:w-[10%] h-[2px] bg-richblack-1200'></div>
+                <p className='w-[85%] sm:w-[90%]'>YEARS OF EXPERIENCE</p>
               </div>
             </div>
 
@@ -171,7 +171,7 @@ export const About = ({currentMode}) => {
               </div>
               <div className='flex flex-row items-center justify-start gap-2 text-base md:text-lg font-medium'>
                 <div className='w-[10%] h-[2px] bg-richblack-1200'></div>
-                <p>AWARDS WON</p>
+                <p className='w-[90%]'>AWARDS WON</p>
               </div>
             </div>
 
@@ -204,7 +204,7 @@ export const About = ({currentMode}) => {
 
         </div>
 
-        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-16 opacity-60'></div>
+        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-12 md:my-16 opacity-60'></div>
 
         {/* Education Section */}
         <div className='flex flex-col items-center justify-center gap-12'>
@@ -227,7 +227,7 @@ export const About = ({currentMode}) => {
 
         </div>
 
-        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-16 opacity-60'></div>
+        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-12 md:my-16 opacity-60'></div>
 
         {/* Experience Section */}
         <div className='flex flex-col items-center justify-center mx-auto gap-12'>
@@ -287,7 +287,7 @@ export const About = ({currentMode}) => {
 
         </div>
 
-        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-16 opacity-60'></div>
+        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-12 md:my-16 opacity-60'></div>
 
         {/* Coding Profiles section */}
         <div className='flex flex-col items-center justify-center mx-auto gap-12'>
@@ -312,7 +312,7 @@ export const About = ({currentMode}) => {
 
         </div>
 
-        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-16 opacity-60'></div>
+        <div className='w-[60%] mx-auto h-[1px] bg-richblack-950 my-12 md:my-16 opacity-60'></div>
 
         {/* Awards & Certifications Section */}
         <div className='flex flex-col items-center justify-center mx-auto gap-12'>
