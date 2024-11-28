@@ -7,6 +7,9 @@ module.exports = {
         // sans: ['Open Sans', 'sans-serif'],
         sans: ['Poppins', 'sans-serif'],
       },
+      screens: {
+        ipad: '820px',
+      },
     },
     colors: {
       orange: "#ffb400",
