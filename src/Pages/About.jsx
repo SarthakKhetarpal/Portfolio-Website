@@ -53,6 +53,8 @@ export const About = ({currentMode}) => {
     const fetchCodingProfileData = async() => {
       setLoading(true);
       try {
+        const testGfg = await fetch("https://www.geeksforgeeks.org/user/sarthakkhetarpal22/");
+        console.log(testGfg);
         const gfgApi = await fetch("https://geeks-for-geeks-stats-api.vercel.app/?raw=Y&userName=sarthakkhetarpal22");
         const gfgData = await gfgApi.json();
         // console.log("GFG : ",gfgData.totalProblemsSolved);
