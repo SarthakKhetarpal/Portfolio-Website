@@ -58,6 +58,10 @@ export const About = ({currentMode}) => {
         // console.log("GFG : ",gfgData.totalProblemsSolved);
         setGfg(gfgData);
         // console.log(gfg.totalProblemsSolved);
+
+        // const gfgTestApi = await fetch("https://www.geeksforgeeks.org/user/sarthakkhetarpal22/");
+        // const data = await gfgTestApi.text(); 
+        // console.log("GFG Test API : ",data);
         
         const leetApi = await fetch("https://alfa-leetcode-api.onrender.com/SarthakKhetarpal/solved");
         const leetData = await leetApi.json();
