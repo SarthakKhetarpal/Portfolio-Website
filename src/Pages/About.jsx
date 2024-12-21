@@ -171,7 +171,7 @@ export const About = ({currentMode}) => {
             <div className={`w-full h-[130px] md:h-[162px] lg:h-full flex flex-col gap-2 border-[1px] border-richblack-1100 ${currentMode === "dark" ? "border-opacity-50" : "border-opacity-15"} rounded-lg px-8 py-6`}>
 
               <div className='text-3xl sm:text-4xl md:text-5xl font-bold text-orange'>
-                1
+                2
               </div>
               <div className='flex flex-row items-center justify-start gap-2 text-base md:text-lg font-medium'>
                 <div className='w-[10%] h-[2px] bg-richblack-1200'></div>
@@ -327,6 +327,7 @@ export const About = ({currentMode}) => {
 
           <div className='flex flex-col justify-center items-center gap-6'>
             <AwardCertificationCard icon={<FaTrophy />} text="Tatva Award by ICICI Prudential Life Insurance for HFY-2024 in IT Category for Best Agent in Group Pricing." link="https://drive.google.com/file/d/18vAtuNBFi3xu8rStDxcvc0useBlWv-25/view?usp=sharing" line={true}/>
+            <AwardCertificationCard icon={<FaTrophy />} text="Best IOne Ranger Award by Hansa Solutions India Pvt. Ltd. at Hansa Annual Awards'2024." link="https://drive.google.com/file/d/1i8zClmo4gCIvv3JqcT-1v6DFDJ0FWJ9i/view?usp=sharing" line={true}/>
             <AwardCertificationCard icon={<PiCertificateBold />} text="The 4.5-month long comprehensive course of Web Development Bootcamp [MERN STACK] by CodeHelp." link="https://learn.codehelp.in/share-certificate?serialno=HQK3BPJU" line={true}/>
             <AwardCertificationCard icon={<PiCertificateBold />} text="The 4 month long comprehensive Low Level Design BootCamp by CodeHelp." link={"https://learn.codehelp.in/share-certificate?serialno=UCVWWZY7"} line={false}/>
           </div>
