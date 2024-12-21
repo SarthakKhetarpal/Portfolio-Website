@@ -53,6 +53,14 @@ export const About = ({currentMode}) => {
     const fetchCodingProfileData = async() => {
       setLoading(true);
       try {
+        //Leetcode
+        const leetApi = await fetch("https://alfa-leetcode-api.onrender.com/SarthakKhetarpal/solved");
+        const leetData = await leetApi.json();
+        // console.log("Leetcod data : ", leetData.solvedProblem);
+        setLeetcode(leetData);
+        // console.log(leetcode.solvedProblem);
+
+        //GeeksForGeeks
         const gfgApi = await fetch("https://geeks-for-geeks-stats-api.vercel.app/?raw=Y&userName=sarthakkhetarpal22");
         const gfgData = await gfgApi.json();
         // console.log("GFG : ",gfgData.totalProblemsSolved);
@@ -62,12 +70,6 @@ export const About = ({currentMode}) => {
         // const gfgTestApi = await fetch("https://www.geeksforgeeks.org/user/sarthakkhetarpal22/");
         // const data = await gfgTestApi.text(); 
         // console.log("GFG Test API : ",data);
-        
-        const leetApi = await fetch("https://alfa-leetcode-api.onrender.com/SarthakKhetarpal/solved");
-        const leetData = await leetApi.json();
-        // console.log("Leetcod data : ", leetData.solvedProblem);
-        setLeetcode(leetData);
-        // console.log(leetcode.solvedProblem);
 
       } catch(error) {
         console.log("Coding Profile API Error.....", error);
