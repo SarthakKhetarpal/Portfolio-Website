@@ -149,7 +149,7 @@ export const About = ({currentMode}) => {
             <CTButton 
               text="Download CV" 
               icon={<FaDownload />} 
-              clickHandler={() => window.open("https://drive.google.com/file/d/1QRtg_VAUM1mD-53qWbS_8Z0kTANr8zWy/view?usp=sharing", '_blank').focus()} 
+              clickHandler={() => window.open("https://drive.google.com/file/d/1RoZC9lqN40Qo382KBzjU2k4rgpUugWI8/view?usp=sharing", '_blank').focus()} 
               currentMode={currentMode} 
             />
 
