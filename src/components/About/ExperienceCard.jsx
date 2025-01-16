@@ -21,7 +21,7 @@ export const ExperienceCard = ({line, duration, designation, organisation, about
 
             <div className='flex flex-col gap-1'>
                 <div className={`${currentMode === "light" ? "bg-richblack-5" : "bg-richblack-950 text-white"}
-                 w-fit rounded-full px-3 py-1 text-xs font-bold`}>
+                 w-fit rounded-full px-3 py-1 text-xs font-bold italic`}>
                     {duration}
                 </div>
                 <p className='font-semibold text-sm sm:text-md'>
@@ -30,7 +30,7 @@ export const ExperienceCard = ({line, duration, designation, organisation, about
                 <p className='font-bold text-richblack-1200 text-sm sm:text-md'>
                     -{" "}{organisation}
                 </p>
-                <p className='text-xs sm:text-sm font-light'>
+                <p className='text-xs sm:text-sm lg:text-md font-light'>
                     {about}
                 </p>
             </div>

@@ -21,7 +21,7 @@ export const EducationCard = ({duration,degree,institute,about,line,currentMode,
 
             <div className='flex flex-col gap-1'>
                 <div className={`${currentMode === "light" ? "bg-richblack-5" : "bg-richblack-950 text-white"}
-                 w-fit rounded-full px-3 py-1 text-xs font-bold`}>
+                 w-fit rounded-full px-3 py-1 text-xs font-bold italic`}>
                     {duration}
                 </div>
                 <div className='flex flex-row justify-between'>
