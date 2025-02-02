@@ -61,15 +61,28 @@ export const About = ({currentMode}) => {
         // console.log(leetcode.solvedProblem);
 
         //GeeksForGeeks
-        const gfgApi = await fetch("https://geeks-for-geeks-stats-api.vercel.app/?raw=Y&userName=sarthakkhetarpal22");
-        const gfgData = await gfgApi.json();
+        // const gfgApi = await fetch("https://geeks-for-geeks-stats-api.vercel.app/?raw=Y&userName=sarthakkhetarpal22");
+        // const gfgData = await gfgApi.json();
         // console.log("GFG : ",gfgData.totalProblemsSolved);
-        setGfg(gfgData);
+        // setGfg(gfgData);
         // console.log(gfg.totalProblemsSolved);
 
-        // const gfgTestApi = await fetch("https://www.geeksforgeeks.org/user/sarthakkhetarpal22/");
-        // const data = await gfgTestApi.text(); 
-        // console.log("GFG Test API : ",data);
+        const gfgTestApi = await fetch(
+          `${process.env.REACT_APP_BASE_URL}/api/gfgdata`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json", // Fix: Correct content type
+            },
+          }
+        );
+        
+        // Convert response to JSON
+        const gfgTestData = await gfgTestApi.json(); 
+        // console.log("GFG API Response: ", gfgTestData);
+        
+        // Set the value correctly
+        setGfg(gfgTestData.total_problem_solved);
 
       } catch(error) {
         console.log("Coding Profile API Error.....", error);
@@ -198,7 +211,7 @@ export const About = ({currentMode}) => {
               skills.map( (skill,index) => (
                 <div key={index} className='flex flex-col gap-6 items-center justify-center group cursor-pointer z-30 transition-all duration-500'>
                   <img src={skill.source} alt={skill.text} 
-                   className='hover:scale-125 w-[60px] sm:w-[75px] md:w-[100px] lg:w-[120px]'
+                   className='hover:scale-125 w-[60px] sm:w-[70px] md:w-[85px] lg:w-[100px] xl:w-[120px]'
                    />
                   <p className={`text-xs font-extrabold invisible opacity-0 shadow-lg ${currentMode === "dark" ? "shadow-black" : "shadow-white"} group-hover:visible group-hover:opacity-100`}>
                     {skill.text}
@@ -246,7 +259,7 @@ export const About = ({currentMode}) => {
               <ExperienceCard 
                 line={true}
                 duration={`September'2024  -  Present`}
-                designation={`Associate System Development Engineer`}
+                designation={`Associate Software Development Engineer`}
                 organisation={`Hansa Solutions India Pvt. Ltd.`}
                 about={<div className='pb-4'>
                   <ul>
@@ -264,7 +277,7 @@ export const About = ({currentMode}) => {
               <ExperienceCard 
                 line={false}
                 duration={`Feburary'2023  -  September'2024`}
-                designation={`Trainee System Development Engineer`}
+                designation={`Trainee Software Development Engineer`}
                 organisation={`Hansa Solutions India Pvt. Ltd.`}
                 about={<div className='pb-4'>
                   <ul className='flex flex-col gap-1'>
@@ -321,7 +334,7 @@ export const About = ({currentMode}) => {
 
             <a className='cursor-pointer z-30' target='blank'
             href='https://www.geeksforgeeks.org/user/sarthakkhetarpal22/'>
-              <CodingProfileCard icon={gfgIcn} total={gfg?gfg.totalProblemsSolved:"-"} loading={loading}/>
+              <CodingProfileCard icon={gfgIcn} total={gfg?gfg:"-"} loading={loading}/>
             </a>
             
           </div>
