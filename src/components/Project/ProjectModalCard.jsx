@@ -45,7 +45,7 @@ export const ProjectModalCard = ({ projectModal, currentMode, skillsImg, project
         <p className='font-medium text-xs md:text-sm'>
           GitHub Repository URL :
         </p>
-        <a href={projectModal.url} className='cursor-pointer group'>
+        <a href={projectModal.github} target='blank'  className='cursor-pointer group'>
           <img src={github.current} alt='GitHub-Icon-URL' className='w-8 md:w-10 group-hover:scale-125' />
         </a>
       </div>

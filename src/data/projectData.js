@@ -28,9 +28,9 @@ export const projectData = [
         img : studynotion,
         video : portfolioVideo,
         name : "StudyNotion - EdTech Complete Solution",
-        desc : "This is a MERN stack web application for Ed-Tech solutions.",
+        desc : "This is a MERN stack based web application for complete Ed-Tech solutions for students and teachers.",
         skills : [{html},{css},{tailwind},{js},{mongodb},{react},{express},{node}],
-        github : "",
+        github : "https://github.com/SarthakKhetarpal/StudyNotion---EdTech-Web-App.git",
         url : ""
     },
     {
@@ -40,8 +40,8 @@ export const projectData = [
         name : "Portfolio Website",
         desc : "This is my personal portfolio website developed using MERN Stack.",
         skills : [{html},{css},{tailwind},{js},{mongodb},{react},{express},{node}],
-        github : "" ,
-        url : ""
+        github : "https://github.com/SarthakKhetarpal/Portfolio-Website.git" ,
+        url : "https://sarthakkhetarpal-portfolio.vercel.app"
     },
     {
         id : 3,
@@ -50,7 +50,7 @@ export const projectData = [
         name : "Razorpay Website Clone",
         desc : "This is Razorpay Clone website created using HTML, Tailwind CSS and Javascript. This project was part of my MERN Stack course.",
         skills : [{html},{css},{tailwind},{js}],
-        github : "" ,
+        github : "https://github.com/SarthakKhetarpal/Razorpay-Website-Clone.git" ,
         url : ""
     },
     {
@@ -60,7 +60,7 @@ export const projectData = [
         name : "Weather Web App",
         desc : "A weather forecast web application which uses API calls to fetch the latest weather update for the user's current location or requested location.",
         skills: [{html},{css},{tailwind},{js}],
-        github : "" ,
+        github : "https://github.com/SarthakKhetarpal/Weather-Web-App.git" ,
         url : ""
     },
     {
@@ -68,9 +68,9 @@ export const projectData = [
         img : chair,
         video : chairVideo,
         name : "Animation Chair Project",
-        desc : "",
+        desc : "Animation chair project is built on CSS responsiveness, animation and transition effects.",
         skills : [{html},{css},{tailwind}],
-        github : "" ,
+        github : "https://github.com/SarthakKhetarpal/Animation-Chair-Project.git" ,
         url : ""
     }
 ];
