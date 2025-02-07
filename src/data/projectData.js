@@ -2,6 +2,8 @@ import studynotion from '../assets/projects/studynotion.png';
 import portfolio from '../assets/projects/portfolio.png';
 import razorpay from '../assets/projects/razorpay.png';
 import weather from '../assets/projects/weather.png';
+import passwordGenerator from '../assets/projects/passwordGenerator.png';
+import ticTacToe from '../assets/projects/tictactoe.png';
 import chair from '../assets/projects/chair.png';
 import html from '../assets/Skills/stack/HTML.png';
 import css from '../assets/Skills/stack/CSS.png';
@@ -21,12 +23,15 @@ import portfolioVideo from '../assets/videos/portfolioVideo.mov';
 import chairVideo from '../assets/videos/chairVideo.mov';
 import weatherVideo from '../assets/videos/weatherVideo.mov';
 import razorpayVideo from '../assets/videos/razorpayVideo.mov';
+import passwordGeneratorVideo from '../assets/videos/passwordGenerator.mov';
+import ticTacToeVideo from '../assets/videos/tictactoeVideo.mov';
+import studynotionVideo from '../assets/videos/studynotionVideo.mov';
 
 export const projectData = [
     {
         id : 1,
         img : studynotion,
-        video : portfolioVideo,
+        video : studynotionVideo,
         name : "StudyNotion - EdTech Complete Solution",
         desc : "This is a MERN stack based web application for complete Ed-Tech solutions for students and teachers.",
         skills : [{html},{css},{tailwind},{js},{mongodb},{react},{express},{node}],
@@ -65,6 +70,26 @@ export const projectData = [
     },
     {
         id : 5,
+        img : passwordGenerator,
+        video : passwordGeneratorVideo,
+        name : "Password Generator Web App",
+        desc : "A random password generator web application which uses underline logic to generate a custom random password on the basis of choices selected by the user.",
+        skills: [{html},{css},{tailwind},{js}],
+        github : "https://github.com/SarthakKhetarpal/Password-Generator-WebApp.git" ,
+        url : ""
+    },
+    {
+        id : 6,
+        img : ticTacToe,
+        video : ticTacToeVideo,
+        name : "Tic-Tac-Toe Game Web App",
+        desc : "Tic-Tac-Toe game web application.",
+        skills: [{html},{css},{tailwind},{js}],
+        github : "https://github.com/SarthakKhetarpal/Password-Generator-WebApp.git" ,
+        url : ""
+    },
+    {
+        id : 7,
         img : chair,
         video : chairVideo,
         name : "Animation Chair Project",
