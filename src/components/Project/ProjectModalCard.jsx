@@ -1,24 +1,28 @@
 import React, { useEffect, useRef } from 'react';
 import githubWhite from '../../assets/Skills/github-white.png';
 import githubBlack from '../../assets/Skills/stack/Github.svg';
+import linkLight from '../../assets/Skills/link-light.png';
+import linkDark from '../../assets/Skills/link-dark.png';
 
 export const ProjectModalCard = ({ projectModal, currentMode, skillsImg, projectVideo }) => {
 
   // Initialize github ref
   //** Explore about useRef hook **
   const github = useRef(currentMode === "dark" ? githubWhite : githubBlack);
+  const liveURL = useRef(currentMode === "dark" ?  linkLight : linkDark);
 
   useEffect(() => {
     // Update the github ref based on the currentMode
     github.current = currentMode === "dark" ? githubWhite : githubBlack;
+    liveURL.current = currentMode === "dark" ? linkLight : linkDark;
   }, [currentMode]);
 
   return (
     <div className={`flex flex-col lg:flex-row w-[100%] h-[90%] gap-y-0 space-y-0 lg:h-fit overflow-y-scroll mx-auto my-auto`}>
-      <video key={projectVideo} className='w-[100%] lg:w-[70%] h-fit lg:h-full' muted loop autoPlay>
+      <video key={projectVideo} className='w-[100%] lg:w-[60%] xl:w-[73%] h-fit lg:h-full' muted loop autoPlay>
         <source src={projectVideo} type="video/mp4" />
       </video>
-      <div className={`lg:w-[30%] w-[100%] ${currentMode === "light" ? "bg-white" : "bg-richblack-1000"} h-full lg:h-auto p-4 flex flex-col gap-4 md:gap-5 overflow-y-scroll`}>
+      <div className={`lg:w-[40%] xl:w-[30%] w-[100%] ${currentMode === "light" ? "bg-white" : "bg-richblack-1000"} h-full lg:h-auto p-4 flex flex-col gap-4 md:gap-5 overflow-y-scroll`}>
         <p className={`font-bold text-lg md:text-xl`}>
           {projectModal.name}
         </p>
@@ -43,11 +47,20 @@ export const ProjectModalCard = ({ projectModal, currentMode, skillsImg, project
           })}
         </div>
         <p className='font-medium text-xs md:text-sm'>
-          GitHub Repository URL :
+          URL's :
         </p>
-        <a href={projectModal.github} target='blank'  className='cursor-pointer group'>
-          <img src={github.current} alt='GitHub-Icon-URL' className='w-8 md:w-10 group-hover:scale-125' />
-        </a>
+        <div className='flex flex-row gap-6'>
+          <a href={projectModal.github} target='blank'  className='cursor-pointer group'>
+            <img src={github.current} alt='GitHub-Icon-URL' className='w-8 md:w-10 group-hover:scale-125' />
+          </a>
+          {
+            projectModal.url && (
+              <a href={projectModal.url} target='blank'  className='cursor-pointer group'>
+                <img src={liveURL.current} alt='LiveLink-Icon-URL' className='w-8 md:w-10 group-hover:scale-125'/>
+              </a>
+            )
+          }
+        </div>
       </div>
     </div>
   );
