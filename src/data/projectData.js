@@ -4,6 +4,7 @@ import razorpay from '../assets/projects/razorpay.png';
 import weather from '../assets/projects/weather.png';
 import passwordGenerator from '../assets/projects/passwordGenerator.png';
 import ticTacToe from '../assets/projects/tictactoe.png';
+import devDetective from '../assets/projects/devDetective.png';
 import chair from '../assets/projects/chair.png';
 import html from '../assets/Skills/stack/HTML.png';
 import css from '../assets/Skills/stack/CSS.png';
@@ -26,6 +27,7 @@ import razorpayVideo from '../assets/videos/razorpayVideo.mov';
 import passwordGeneratorVideo from '../assets/videos/passwordGenerator.mov';
 import ticTacToeVideo from '../assets/videos/tictactoeVideo.mov';
 import studynotionVideo from '../assets/videos/studynotionVideo.mov';
+import devDetectiveVideo from '../assets/videos/devDetectiveVideo.mov';
 
 export const projectData = [
     {
@@ -70,6 +72,16 @@ export const projectData = [
     },
     {
         id : 5,
+        img : devDetective,
+        video : devDetectiveVideo,
+        name : "Dev Detective",
+        desc : "Dev Detective is a web app project which uses API call to find out GitHub user profile when the user provides a GitHub username.",
+        skills: [{html},{css},{tailwind},{js}],
+        github : "https://github.com/SarthakKhetarpal/Dev-Detective.git" ,
+        url : ""
+    },
+    {
+        id : 6,
         img : passwordGenerator,
         video : passwordGeneratorVideo,
         name : "Password Generator Web App",
@@ -79,17 +91,17 @@ export const projectData = [
         url : ""
     },
     {
-        id : 6,
+        id : 7,
         img : ticTacToe,
         video : ticTacToeVideo,
         name : "Tic-Tac-Toe Game Web App",
         desc : "Tic-Tac-Toe game web application.",
         skills: [{html},{css},{tailwind},{js}],
-        github : "https://github.com/SarthakKhetarpal/Password-Generator-WebApp.git" ,
+        github : "https://github.com/SarthakKhetarpal/Tic-Tac-Toe.git" ,
         url : ""
     },
     {
-        id : 7,
+        id : 8,
         img : chair,
         video : chairVideo,
         name : "Animation Chair Project",
