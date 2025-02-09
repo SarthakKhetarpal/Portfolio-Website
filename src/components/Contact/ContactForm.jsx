@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { InputFieldError } from './InputFieldError';
 import { FaPaperPlane } from "react-icons/fa";
 import toast from 'react-hot-toast';
+import axios from "axios";
 // import mailSender from '../../mail/mailSender';
 
 export const ContactForm = ({currentMode, sendEmail}) => {
@@ -21,11 +22,28 @@ export const ContactForm = ({currentMode, sendEmail}) => {
     }, [reset, isSubmitSuccessful])
 
     const submitContactForm = async (data) => {
-        console.log("Form Data : ", data);
+        const emailBody = `
+        Dear ${data.name},
+
+        Email: ${data.email}
+
+        Thank you so much for connecting, I have received your message and will get back to you at the earliest possible.
+
+        Message: "${data.message}"
+
+        Thanks & Regards,  
+        Sarthak Khetarpal
+    `;
+
+        // console.log("Form Data : ", data);
         toast.loading("Sending message...");
         try {
             //add mailing fucntionality
-            // sendEmail(data.email);
+            await axios.post(`${process.env.REACT_APP_BASE_URL}/user/send-email`, {
+                to:data.email,
+                subject: data.subject,
+                text: emailBody  
+            });
             toast.dismiss();
             toast.success("Message sent");
         }
