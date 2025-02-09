@@ -237,7 +237,7 @@ export const About = ({currentMode}) => {
                 duration="2019 - 2023"
                 degree="Bachelor of Technology"
                 institute="SRM University"
-                about="Bachelors in Technology(B.Tech) in Computer Science Engineering with specialisation in Cloud and Mobile based applications"
+                about="Bachelor of Technology(B.Tech) in Computer Science Engineering with specialisation in Cloud and Mobile based applications"
                 cgpa="8.56 CGPA"
                 line={false}
                 currentMode={currentMode}

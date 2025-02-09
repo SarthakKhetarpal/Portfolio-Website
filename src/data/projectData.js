@@ -5,6 +5,7 @@ import weather from '../assets/projects/weather.png';
 import passwordGenerator from '../assets/projects/passwordGenerator.png';
 import ticTacToe from '../assets/projects/tictactoe.png';
 import devDetective from '../assets/projects/devDetective.png';
+import discord from '../assets/projects/discord.png';
 import chair from '../assets/projects/chair.png';
 import html from '../assets/Skills/stack/HTML.png';
 import css from '../assets/Skills/stack/CSS.png';
@@ -28,6 +29,7 @@ import passwordGeneratorVideo from '../assets/videos/passwordGenerator.mov';
 import ticTacToeVideo from '../assets/videos/tictactoeVideo.mov';
 import studynotionVideo from '../assets/videos/studynotionVideo.mov';
 import devDetectiveVideo from '../assets/videos/devDetectiveVideo.mov';
+import discordVideo from '../assets/videos/discordVideo.mov';
 
 export const projectData = [
     {
@@ -55,7 +57,7 @@ export const projectData = [
         img : razorpay,
         video : razorpayVideo,
         name : "Razorpay Website Clone",
-        desc : "This is Razorpay Clone website created using HTML, Tailwind CSS and Javascript. This project was part of my MERN Stack course.",
+        desc : "This is Razorpay Clone website created using HTML, Tailwind CSS and Javascript. It is a responsive website.",
         skills : [{html},{css},{tailwind},{js}],
         github : "https://github.com/SarthakKhetarpal/Razorpay-Website-Clone.git" ,
         url : ""
@@ -66,7 +68,7 @@ export const projectData = [
         video : weatherVideo,
         name : "Weather Web App",
         desc : "A weather forecast web application which uses API calls to fetch the latest weather update for the user's current location or requested location.",
-        skills: [{html},{css},{tailwind},{js}],
+        skills: [{html},{css},{js}],
         github : "https://github.com/SarthakKhetarpal/Weather-Web-App.git" ,
         url : ""
     },
@@ -96,17 +98,27 @@ export const projectData = [
         video : ticTacToeVideo,
         name : "Tic-Tac-Toe Game Web App",
         desc : "Tic-Tac-Toe game web application.",
-        skills: [{html},{css},{tailwind},{js}],
+        skills: [{html},{css},{js}],
         github : "https://github.com/SarthakKhetarpal/Tic-Tac-Toe.git" ,
         url : ""
     },
     {
         id : 8,
+        img : discord,
+        video : discordVideo,
+        name : "Discord Website Clone",
+        desc : "This is Discord Clone website created using HTML, CSS & Tailwind CSS. It is a responsive website.",
+        skills : [{html},{css},{tailwind}],
+        github : "https://github.com/SarthakKhetarpal/Discord-Website-Clone.git" ,
+        url : ""
+    },
+    {
+        id : 9,
         img : chair,
         video : chairVideo,
         name : "Animation Chair Project",
         desc : "Animation chair project is built on CSS responsiveness, animation and transition effects.",
-        skills : [{html},{css},{tailwind}],
+        skills : [{html},{css}],
         github : "https://github.com/SarthakKhetarpal/Animation-Chair-Project.git" ,
         url : ""
     }
