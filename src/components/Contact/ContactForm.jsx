@@ -22,7 +22,7 @@ export const ContactForm = ({currentMode, sendEmail}) => {
     }, [reset, isSubmitSuccessful])
 
     const submitContactForm = async (data) => {
-        const emailBody = `Dear ${data.name},\n\nEmail: ${data.email}\n\nThank you so much for connecting, I have received your message and will get back to you at the earliest possible.\n\nMessage: "${data.message}"\n\nThanks & Regards,\nSarthak Khetarpal`;
+        const emailBody = `Dear ${data.name},\n\nThank you so much for visiting my portfolio and getting in touch! I have received your message and will get back to you at the earliest possible.\nLooking forward to chatting with you!\n\nMessage: "${data.message}"\n\nThanks & Regards,\nSarthak Khetarpal\nPortfolio: https://sarthakkhetarpal-portfolio.vercel.app/ \nLinkedIn: http://www.linkedin.com/in/sarthak-khetarpal-3b87411ab`;
 
         // console.log("Form Data : ", data);
         toast.loading("Sending message...");
