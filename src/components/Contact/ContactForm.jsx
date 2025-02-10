@@ -22,7 +22,7 @@ export const ContactForm = ({currentMode, sendEmail}) => {
     }, [reset, isSubmitSuccessful])
 
     const submitContactForm = async (data) => {
-        const emailBody = `Dear ${data.name},\n\nThank you so much for visiting my portfolio and getting in touch! I have received your message and will get back to you at the earliest possible.\nLooking forward to chatting with you!\n\nMessage: "${data.message}"\n\nThanks & Regards,\nSarthak Khetarpal\nPortfolio: https://sarthakkhetarpal-portfolio.vercel.app/ \nLinkedIn: http://www.linkedin.com/in/sarthak-khetarpal-3b87411ab`;
+        const emailBody = `Dear ${data.name},\n\nThank you so much for visiting my portfolio and getting in touch! I have received your message and will get back to you at the earliest possible.\nLooking forward to interacting with you!\n\nThanks & Regards,\nSarthak Khetarpal\nPortfolio: https://sarthakkhetarpal-portfolio.vercel.app/ \nLinkedIn: http://www.linkedin.com/in/sarthak-khetarpal-3b87411ab`;
         const emailSubject = `Thank you for getting in touch, ${data.name}!`;
 
         // console.log("Form Data : ", data);
@@ -32,7 +32,9 @@ export const ContactForm = ({currentMode, sendEmail}) => {
             await axios.post(`${process.env.REACT_APP_BASE_URL}/user/send-email`, {
                 to:data.email,
                 subject: emailSubject,
-                text: emailBody  
+                text: emailBody,
+                user_subject: data.subject,
+                user_msg: `Sender Name:\t${data.name}\n\nSender E-mail:\t${data.email}\n\nSender Message:\t${data.message}`  
             });
             toast.dismiss();
             toast.success("Message sent");
