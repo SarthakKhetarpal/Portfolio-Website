@@ -13,10 +13,6 @@ export const AwardCertificationCard = ({icon,text,line,link}) => {
                 {icon}
             </div>
             
-            {/* {line === true && (
-                <div className='w-[2px] h-12 bg-richblack-950'></div>
-            )} */}
-            
         </div>
 
         <a href={link} target='blank' 

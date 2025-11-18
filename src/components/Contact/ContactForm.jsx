@@ -139,7 +139,7 @@ export const ContactForm = ({currentMode, sendEmail}) => {
             <button
                 type='submit' 
                 className={`flex gap-4 items-center justify-center border border-orange w-fit rounded-full z-10
-                 ${currentMode==="dark" ? "text-white" : "text-richblack-500"} transition-all duration-300 cursor-pointer`} 
+                 ${currentMode==="dark" ? "text-white" : "text-richblack-500"} transition-all duration-300 cursor-pointer shadow-lg`} 
                  >
                 <div className='pl-4 md:pl-6 md:pr-1 py-2 md:py-4 text-xs md:text-sm font-semibold'>
                     SEND MESSAGE

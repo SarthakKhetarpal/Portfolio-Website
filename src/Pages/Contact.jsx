@@ -14,7 +14,7 @@ const detailsData = [
     id: 1,
     icon: <FaRegAddressCard />,
     header: "CURRENT ADDRESS",
-    text: "Hyderabad, India"
+    text: "Chandigarh, India"
   },
   {
     id: 3,

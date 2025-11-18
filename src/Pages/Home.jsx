@@ -1,69 +1,71 @@
-import SarthakImage from '../assets/sarthak2.png';
-import SarthakImagePassport from '../assets/SarthakPassport.png';
-import { TypeAnimation } from 'react-type-animation';
-import { CTButton } from '../components/Common/CTButton';
+import SarthakImage from "../assets/sarthak2.png";
+import SarthakImagePassport from "../assets/SarthakPassport.png";
+import { TypeAnimation } from "react-type-animation";
+import { CTButton } from "../components/Common/CTButton";
 import { useNavigate } from "react-router-dom";
 import { TiArrowRightThick } from "react-icons/ti";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-export const Home = ({currentMode}) => {
-
+export const Home = ({ currentMode }) => {
   // console.log("Inside Home",currentMode);
   const navigate = useNavigate();
 
-  const [imgSource, setImgSource] = useState('');
+  const [imgSource, setImgSource] = useState("");
 
-  useEffect( () => {
+  useEffect(() => {
     const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     scrollToTop();
-  },[]);
+  }, []);
 
-  useEffect( () => {
+  useEffect(() => {
     const updateImgSource = () => {
-      if(window.innerWidth < 1024) {
+      if (window.innerWidth < 1024) {
         setImgSource(SarthakImagePassport);
-      }
-      else {
+      } else {
         setImgSource(SarthakImage);
       }
     };
 
     updateImgSource();
 
-    window.addEventListener('resize',updateImgSource);
+    window.addEventListener("resize", updateImgSource);
 
     return () => {
-      window.removeEventListener('resize',updateImgSource);
+      window.removeEventListener("resize", updateImgSource);
     };
-
-  },[]);
+  }, []);
 
   return (
     <div className="home-effect flex lg:flex-row flex-col items-center justify-center w-screen lg:min-h-[calc(100vh-env(safe-area-inset-bottom))] lg:mt-0  lg:mb-0 min-h-[calc(100% + 15%)] mt-[6%] mb-[15%] transition-all duration-200">
-      <div className='w-[80%] md:w-[70%] lg:w-[50%] mt-6 lg:mt-0 border-richblack-100'>
-        <img src={imgSource} alt='Sarthak'
-          className='2xl:w-[68%] lg:w-[75%] w-[65%] lg:rounded-3xl lg:my-0 mb-6 rounded-full
-          mx-auto text-center shadow-2xl shadow-black'
+      <div className="w-[80%] md:w-[70%] lg:w-[50%] mt-6 lg:mt-0 border-richblack-100">
+        <img
+          src={imgSource}
+          alt="Sarthak"
+          className="w-[65%] lg:rounded-3xl lg:my-0 mb-6 rounded-full
+          mx-auto text-center shadow-2xl shadow-black"
         />
       </div>
-      <div className='w-[80%] lg:w-[60%] flex flex-col justify-center items-center lg:items-start gap-y-4'>
-
-        <p className='text-orange pt-4 text-xl sm:text-2xl md:text-4xl lg:text-[42px] font-bold'>
-           - I'M SARTHAK KHETARPAL
+      <div className="w-[80%] lg:w-[60%] flex flex-col justify-center items-center lg:items-start gap-y-4">
+        <p className="text-orange pt-4 text-xl sm:text-2xl md:text-4xl lg:text-[42px] font-bold">
+          - I'M SARTHAK KHETARPAL
         </p>
 
-        <div className={`${currentMode==="dark" ? "text-white" : "text-richblack-500"} text-2xl sm:text-3xl md:text-5xl font-bold`}>
+        <div
+          className={`${
+            currentMode === "dark" ? "text-white" : "text-richblack-500"
+          } text-2xl sm:text-3xl md:text-5xl font-bold`}
+        >
           <TypeAnimation
             sequence={[
-              'Software Engineer',
+              "Software Engineer",
               2000,
-              'Web Developer',
+              "Web Developer",
               2000,
-              'Software Developer',
-              2000
+              "Software Developer",
+              2000,
             ]}
             wrapper="span"
             speed={10}
@@ -71,25 +73,49 @@ export const Home = ({currentMode}) => {
           />
         </div>
 
-        <p className={`${currentMode==="dark" ? "text-white" : "text-richblack-500"} w-[90%] lg:w-[75%] text-xs md:text-sm leading-6 xl:text-md py-[25px] xl:py-[35px]`}>
-        I’m a passionate Software Development Engineer with a strong focus on building efficient, scalable, and user-friendly applications, with <b>2+ years</b> of experience in working on a wide range of projects, from full-stack web applications to system-level software.
-        <br/><br/>Beyond my technical skills, I am a continuous learner, always exploring new technologies and staying up-to-date with industry trends to improve and expand my expertise.
-        <br/><br/>Let’s create something great together!
+        <p
+          className={`${
+            currentMode === "dark" ? "text-white" : "text-richblack-500"
+          } w-[90%] lg:w-[75%] text-xs md:text-sm leading-6 xl:text-md py-[25px] xl:py-[35px]`}
+        >
+          I’m a passionate Software Development Engineer with a strong focus on
+          building efficient, scalable, and user-friendly applications, with{" "}
+          <b>
+            {(() => {
+              const start = new Date(2023, 1);
+              const now = new Date();
+
+              const years = now.getFullYear() - start.getFullYear();
+              const months = now.getMonth() - start.getMonth();
+              const totalMonths = years * 12 + months;
+
+              return (totalMonths / 12).toFixed(1);
+            })()}
+            + years
+          </b>{" "}
+          of experience in working on a wide range of projects, from full-stack
+          web applications to system-level software.
+          <br />
+          <br />
+          Beyond my technical skills, I am a continuous learner, always
+          exploring new technologies and staying up-to-date with industry trends
+          to improve and expand my expertise.
+          <br />
+          <br />
+          Let’s create something great together!
         </p>
 
-        <CTButton 
-          text="MORE ABOUT ME" 
-          icon={<TiArrowRightThick />} 
+        <CTButton
+          text="MORE ABOUT ME"
+          icon={<TiArrowRightThick />}
           clickHandler={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: "smooth" });
             navigate("/About");
-          }} 
-          currentMode={currentMode} 
+          }}
+          currentMode={currentMode}
           className="mb-12"
         />
-
       </div>
-
     </div>
-  )
-}
+  );
+};

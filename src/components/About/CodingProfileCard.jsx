@@ -4,8 +4,8 @@ import AnimatedNumber from 'react-animated-numbers'
 
 export const CodingProfileCard = ({icon,total,loading}) => {
   return (
-    <div className='flex flex-row gap-10 p-4 sm:p-8 md:p-10 justify-center items-center z-30 transition-all duration-200
-    border-[1px] border-opacity-40 border-richblack-950 hover:shadow-lg hover:shadow-black hover:scale-110
+    <div className='flex flex-row gap-10 py-4 px-4 sm:px-8 md:px-10 justify-center items-center z-30 transition-all duration-200
+    border-[1px] border-opacity-40 border-richblack-950 hover:shadow-lg hover:shadow-orange hover:scale-110
     rounded-lg'>
 
         <img className='w-16 md:w-24' src={icon} loading='lazy' alt='Logo'/>

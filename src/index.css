@@ -76,3 +76,16 @@ button:hover {
   overflow: hidden;
 }
 
+@keyframes lineMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 20px;
+  }
+}
+
+.animate-line-move {
+  animation: lineMove 1.0s linear infinite;
+}
+

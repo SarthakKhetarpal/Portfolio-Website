@@ -65,7 +65,7 @@ export const Portfolio = ({ currentMode }) => {
       </div>
       {/* Body */}
       <div className={`${currentMode === "dark" ? "text-white" : "text-richblack-500"} h-[80%] w-screen pt-2 lg:pt-16 pb-40 mx-auto transition-all duration-200`}>
-        <div className='flex flex-wrap flex-row justify-center items-center mx-auto w-screen lg:max-w-[70%] gap-x-14 gap-y-8 md:gap-y-16'>
+        <div className='flex flex-wrap flex-row justify-center items-center mx-auto w-screen lg:max-w-[75%] gap-x-14 gap-y-8 md:gap-y-16'>
           {
             projectData.map((project) => (
               <div onClick={() => {
