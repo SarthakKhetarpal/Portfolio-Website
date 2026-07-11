@@ -28,8 +28,8 @@ export const ContactForm = ({currentMode, sendEmail}) => {
         // console.log("Form Data : ", data);
         toast.loading("Sending message...");
         try {
-            //add mailing fucntionality
-            await axios.post(`${process.env.REACT_APP_BASE_URL}/user/send-email`, {
+            // Same-origin Vercel serverless function (see /api/send-email.js)
+            await axios.post(`/api/send-email`, {
                 to:data.email,
                 subject: emailSubject,
                 text: emailBody,

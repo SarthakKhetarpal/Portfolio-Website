@@ -38,7 +38,7 @@ const skills = [
     {
         sourceLight: ts,
         sourceDark: ts,
-        text: "Typecript"
+        text: "TypeScript"
     },
     {
         sourceLight: java,
@@ -48,22 +48,22 @@ const skills = [
     {
         sourceLight: react,
         sourceDark: react,
-        text: "React JS"
+        text: "React.js"
     },
     {
         sourceLight: next,
         sourceDark: next,
-        text: "Next JS"
+        text: "Next.js"
     },
     {
         sourceLight: express,
         sourceDark: express,
-        text: "Express JS"
+        text: "Express.js"
     },
     {
         sourceLight: node,
         sourceDark: node,
-        text: "Node JS"
+        text: "Node.js"
     },
     {
         sourceLight: aws,
@@ -73,12 +73,12 @@ const skills = [
     {
         sourceLight: restapiLight,
         sourceDark: restapiDark,
-        text: "Rest API's"
+        text: "REST APIs"
     },
     {
         sourceLight: mongodb,
         sourceDark: mongodb,
-        text: "Mongo DB"
+        text: "MongoDB"
     },
     {
         sourceLight: postgresql,
@@ -88,7 +88,7 @@ const skills = [
     {
         sourceLight: mysql,
         sourceDark: mysql,
-        text: "MYSQL"
+        text: "MySQL"
     },
     {
         sourceLight: tailwind,
@@ -98,12 +98,12 @@ const skills = [
     {
         sourceLight: git,
         sourceDark: git,
-        text: "GIT"
+        text: "Git"
     },
     {
         sourceLight: github,
         sourceDark: githubLight,
-        text: "Github"
+        text: "GitHub"
     }
 ]; 
 

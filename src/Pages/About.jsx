@@ -12,6 +12,7 @@ import { CTButton } from "../components/Common/CTButton";
 import { FaDownload } from "react-icons/fa";
 import { certificationsAndAwardsData } from "../data/certificationAndAwardsData";
 import { experienceData } from "../data/experienceData";
+import { getYearsOfExperience } from "../utils/experience";
 
 export const About = ({ currentMode }) => {
 
@@ -46,21 +47,14 @@ export const About = ({ currentMode }) => {
         const leetData = await leetApi.json();
         setLeetcode(leetData);
 
-        //GeeksForGeeks
-        const gfgTestApi = await fetch(
-          `${process.env.REACT_APP_BASE_URL}/api/gfgdata`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        //GeeksForGeeks — same-origin serverless function (prod: Vercel /api,
+        //local dev: mounted by src/setupProxy.js on the CRA dev server)
+        const gfgTestApi = await fetch("/api/gfgdata");
+        if (!gfgTestApi.ok) {
+          throw new Error(`GFG API responded with ${gfgTestApi.status}`);
+        }
 
-        // Convert response to JSON
         const gfgTestData = await gfgTestApi.json();
-
-        // Set the value correctly
         setGfg(gfgTestData.total_problem_solved);
       } catch (error) {
         console.log("Coding Profile API Error.....", error);
@@ -134,7 +128,7 @@ export const About = ({ currentMode }) => {
                 >
                   sarthakkhetarpal2000@icloud.com
                 </a>
-                <p className="font-medium">Chandigarh</p>
+                <p className="font-medium">Panchkula, Haryana</p>
                 <p className="flex justify-center items-center gap-1 font-medium">
                   India <span className="text-xl">🇮🇳</span>
                 </p>
@@ -145,12 +139,8 @@ export const About = ({ currentMode }) => {
               text="Download CV"
               icon={<FaDownload />}
               clickHandler={() =>
-                window
-                  .open(
-                    "https://drive.google.com/file/d/1RoZC9lqN40Qo382KBzjU2k4rgpUugWI8/view?usp=sharing",
-                    "_blank"
-                  )
-                  .focus()
+                // Served from /public — always the latest resume shipped with the site
+                window.open("/SarthakKhetarpal_Resume.pdf", "_blank").focus()
               }
               currentMode={currentMode}
             />
@@ -166,19 +156,7 @@ export const About = ({ currentMode }) => {
               } rounded-lg px-8 py-6`}
             >
               <div className="flex flex-row items-start justify-between text-3xl sm:text-4xl md:text-5xl font-bold text-orange">
-                <span>
-                  {(() => {
-                    const start = new Date(2023, 1);
-                    const now = new Date();
-
-                    const years = now.getFullYear() - start.getFullYear();
-                    const months = now.getMonth() - start.getMonth();
-                    const totalMonths = years * 12 + months;
-
-                    return (totalMonths / 12).toFixed(1);
-                  })()}
-                  +
-                </span>
+                <span>{getYearsOfExperience()}+</span>
                 <span>
                   <FaLaptopCode />
                 </span>
@@ -270,7 +248,16 @@ export const About = ({ currentMode }) => {
             Education
           </p>
 
-          <div className="w-[95%] md:w-[80%] lg:w-[60%]">
+          <div className="w-[95%] md:w-[80%] lg:w-[60%] flex flex-col gap-2 items-start">
+            <EducationCard
+              duration="2026 - Present"
+              degree="Master of Technology"
+              institute="BITS Pilani (WILP)"
+              about="Master of Technology (M.Tech) in Computer Software Engineering through the Work Integrated Learning Programme."
+              cgpa="Pursuing"
+              line={true}
+              currentMode={currentMode}
+            />
             <EducationCard
               duration="2019 - 2023"
               degree="Bachelor of Technology"
@@ -332,7 +319,7 @@ export const About = ({ currentMode }) => {
             <a
               className="cursor-pointer z-30"
               target="blank"
-              href="https://www.geeksforgeeks.org/user/sarthakkhetarpal22/"
+              href="https://www.geeksforgeeks.org/profile/sarthakkhetarpal22"
             >
               <CodingProfileCard
                 icon={gfgIcn}

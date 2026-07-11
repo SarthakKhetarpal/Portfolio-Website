@@ -1,5 +1,6 @@
 import SarthakImage from "../assets/sarthak2.png";
 import SarthakImagePassport from "../assets/SarthakPassport.png";
+import { getYearsOfExperience } from "../utils/experience";
 import { TypeAnimation } from "react-type-animation";
 import { CTButton } from "../components/Common/CTButton";
 import { useNavigate } from "react-router-dom";
@@ -60,11 +61,11 @@ export const Home = ({ currentMode }) => {
         >
           <TypeAnimation
             sequence={[
-              "Software Engineer",
+              "Senior Software Engineer",
               2000,
-              "Web Developer",
+              "Full Stack Developer",
               2000,
-              "Software Developer",
+              "Team Lead & Mentor",
               2000,
             ]}
             wrapper="span"
@@ -78,28 +79,16 @@ export const Home = ({ currentMode }) => {
             currentMode === "dark" ? "text-white" : "text-richblack-500"
           } w-[90%] lg:w-[75%] text-xs md:text-sm leading-6 xl:text-md py-[25px] xl:py-[35px]`}
         >
-          I’m a passionate Software Development Engineer with a strong focus on
-          building efficient, scalable, and user-friendly applications, with{" "}
-          <b>
-            {(() => {
-              const start = new Date(2023, 1);
-              const now = new Date();
-
-              const years = now.getFullYear() - start.getFullYear();
-              const months = now.getMonth() - start.getMonth();
-              const totalMonths = years * 12 + months;
-
-              return (totalMonths / 12).toFixed(1);
-            })()}
-            + years
-          </b>{" "}
-          of experience in working on a wide range of projects, from full-stack
-          web applications to system-level software.
+          I’m a software engineer at heart — I love turning ideas into products
+          people actually use. Over <b>{getYearsOfExperience()}+ years</b> of
+          building software — from full-stack web platforms to system-level
+          applications — the thrill of shipping something new hasn’t faded one
+          bit.
           <br />
           <br />
-          Beyond my technical skills, I am a continuous learner, always
-          exploring new technologies and staying up-to-date with industry trends
-          to improve and expand my expertise.
+          What keeps me hooked is how fast technology moves. A new framework, an
+          AI-powered workflow, a smarter way to architect a system — I’m always
+          experimenting, learning, and upgrading myself, one project at a time.
           <br />
           <br />
           Let’s create something great together!

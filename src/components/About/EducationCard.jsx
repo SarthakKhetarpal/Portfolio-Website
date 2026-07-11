@@ -3,9 +3,9 @@ import { FaBook } from "react-icons/fa";
 
 export const EducationCard = ({duration,degree,institute,about,line,currentMode, cgpa}) => {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='w-full flex flex-col justify-between items-center'>
 
-        <div className='flex flex-row gap-6 justify-start items-start'>
+        <div className='w-full flex flex-row gap-6 justify-start items-start'>
 
             <div className='flex flex-col items-center justify-center'>
 
@@ -19,7 +19,7 @@ export const EducationCard = ({duration,degree,institute,about,line,currentMode,
             
             </div>
 
-            <div className='flex flex-col gap-1'>
+            <div className='flex-1 flex flex-col gap-1'>
                 <div className={`${currentMode === "light" ? "bg-richblack-5" : "bg-richblack-950 text-white"}
                  w-fit rounded-full px-3 py-1 text-xs font-bold italic`}>
                     {duration}

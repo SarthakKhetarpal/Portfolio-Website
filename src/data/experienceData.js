@@ -2,20 +2,27 @@ export const experienceData = [
   {
     line: false,
     duration: `December'2025  -  Present`,
-    designation: `Associate Consultant(Technology) / Full Stack Developer`,
+    designation: `Technology Consultant - Senior Software Development Engineer`,
     organisation: `Poplify Pvt. Ltd.`,
     about: <div className='pb-4'>
+                <ul>
+                  <li>• Serving as a full-time developer for cloud services client <b className='font-bold'>VirtualDCS</b>, leading <b className='font-bold'>application security improvements</b>: migrated hardcoded secrets from source code to <b className='font-bold'>Azure Key Vault</b> with secret rotation, secured API endpoints, and implemented <b className='font-bold'>role-based authorization (RBAC)</b>.</li>
+                  <li>• Delivered a full-stack web platform for the NGO <b className='font-bold'>One Kind Act</b> end-to-end — architecture, development, and production release.</li>
+                  <li>• <b className='font-bold'>Architecting scalable, modular backend systems</b> following clean architecture and SOLID principles; driving technical design discussions and architecture decisions across multiple projects.</li>
+                  <li>• Engineered structured prompt frameworks and <b className='font-bold'>rule-based AI workflows</b> that keep AI-assisted code generation precise, standards-compliant, and aligned with the latest documentation.</li>
+                  <li>• <b className='font-bold'>Mentoring junior developers</b> on development standards, code quality, and production best practices.</li>
+                  <li>• Leveraging technologies including <b className='font-bold'>ReactJS, NextJS, NodeJS, ExpressJS, MongoDB, PostgreSQL, TypeScript and Tailwind CSS</b> to build robust, maintainable, and high-performing solutions.</li>
+                </ul>
               </div>,
   },
   {
     line: false,
     duration: `May'2025  -  November'2025`,
-    designation: `Senior Software Development Engineer`,
-    organisation: `Neebha Web Technologies Pvt. Ltd.`,
+    designation: `Senior Software Development Engineer - MERN Stack`,
+    organisation: `Neebha Web Services Pvt. Ltd.`,
     about: <div className='pb-4'>
                 <ul>
-                  <li>• <b className='font-bold'>Led the end-to-end development and delivery of multiple full-stack projects</b> including an eCommerce platform, an online grocery store backend, and a service provider website, leveraging the MERN stack to ensure scalability, security, optimized workflows, and seamless user experience.</li>
-                  <li>• <b className='font-bold'>Spearheading the MERN development team as a Unit Lead.</b></li>
+                  <li>• <b className='font-bold'>Led a 4-member MERN team as Unit Lead</b>; delivered <b className='font-bold'>2 full-stack client projects end-to-end</b>, including an eCommerce platform and an online grocery store, ensuring scalability, security, optimized workflows, and seamless user experience.</li>
                   <li>• <b className='font-bold'>Collaborated directly with clients</b> to gather requirements, translating technical challenges into business-friendly solutions and maintaining strong client relationships.</li>
                   <li>• <b className='font-bold'>Mentored junior developers</b> on MERN stack development, design, and clean coding practices, boosting team efficiency and reducing delivery timelines.</li>
                   <li>• Leveraged technologies including <b className='font-bold'>ReactJS, NextJS, NodeJS, ExpressJS, MongoDB, PostgreSQL, Tailwind CSS, Javascript, TypeScript and AWS</b> to build robust, maintainable, and high-performing solutions.</li>
@@ -41,7 +48,7 @@ export const experienceData = [
   },
   {
     line: false,
-    duration: `Feburary'2023  -  September'2024`,
+    duration: `February'2023  -  September'2024`,
     designation: `Trainee Software Development Engineer`,
     organisation: `Hansa Solutions India Pvt. Ltd.`,
     about: <div className='pb-4'>
